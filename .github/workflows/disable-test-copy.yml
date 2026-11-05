@@ -1,0 +1,21 @@
+name: Disable Test
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+      - 'master'
+      - 'rc/*'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report that the workflow ran
+        run: |
+          echo "event=${{ github.event_name }}"
+          echo "head=${{ github.head_ref }} base=${{ github.base_ref }}"
+          echo "If you can read this, the disabled flag did NOT block the run."
