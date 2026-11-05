@@ -1,4 +1,4 @@
-name: Disable Test
+name: Disable Test Copy
 
 on:
   pull_request:

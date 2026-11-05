@@ -1,5 +1,4 @@
-name: Disable Test Copy
-
+name: Disable Test
 on:
   pull_request:
     branches:
